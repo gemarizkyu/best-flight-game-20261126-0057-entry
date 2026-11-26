@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyline Courier — a 3D flight game</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./src/style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.min.js" } }
+</script>
+</head>
+<body>
+<canvas id="scene" aria-label="Skyline Courier: fly the Kite-7 courier plane through the rings and land back on the runway"></canvas>
+<canvas id="hud" aria-hidden="true"></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+
+<div id="menu" class="overlay">
+  <div class="panel">
+    <h1>SKYLINE COURIER</h1>
+    <p class="tagline">Fly the Kite&#8209;7 over Merapi Valley. Thread the rings, mind your fuel, bring her home.</p>
+    <div class="missions">
+      <button class="mission" data-mission="ring">
+        <span class="m-name">RING RUN</span>
+        <span class="m-desc">8 golden rings, 4 minutes. Pure flying, pure speed.</span>
+      </button>
+      <button class="mission" data-mission="cargo">
+        <span class="m-name">CARGO RUN</span>
+        <span class="m-desc">Take off from the strip, thread 5 rings, land back on the runway. The full sortie.</span>
+      </button>
+      <button class="mission" data-mission="free">
+        <span class="m-name">FREE FLIGHT</span>
+        <span class="m-desc">No clock, no rings. Just you, the valley and the sunset.</span>
+      </button>
+    </div>
+    <p class="controls">THROTTLE <b>Shift / Ctrl</b> &nbsp;·&nbsp; PITCH <b>&#8593; &#8595;</b> &nbsp;·&nbsp; BANK <b>&#8592; &#8594;</b> &nbsp;·&nbsp; RUDDER <b>A / D</b> &nbsp;·&nbsp; GEAR <b>G</b> &nbsp;·&nbsp; FLAPS <b>F</b> &nbsp;·&nbsp; CAMERA <b>C</b> &nbsp;·&nbsp; PAUSE <b>P</b> &nbsp;·&nbsp; RESTART <b>R</b> &nbsp;·&nbsp; MOUSE DRAG steers too</p>
+    <p class="hint">Best on desktop Chrome. Sound starts on your first click.</p>
+  </div>
+</div>
+
+<div id="pause" class="overlay hidden">
+  <div class="panel">
+    <h2>PAUSED</h2>
+    <p class="tagline">The valley waits. The fuel does not.</p>
+    <button id="resume" class="big">RESUME &nbsp;·&nbsp; P</button>
+    <button id="quit-to-menu" class="big ghost">QUIT TO MENU</button>
+  </div>
+</div>
+
+<div id="over" class="overlay hidden">
+  <div class="panel">
+    <h2 id="over-title">MISSION COMPLETE</h2>
+    <p id="over-text" class="tagline"></p>
+    <p id="over-score" class="score-line"></p>
+    <button id="fly-again" class="big">FLY AGAIN &nbsp;·&nbsp; R</button>
+    <button id="over-menu" class="big ghost">CHANGE MISSION</button>
+  </div>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
