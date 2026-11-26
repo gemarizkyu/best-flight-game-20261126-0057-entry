@@ -1,4 +1,6 @@
-/* Skyline Courier — page chrome: full-screen canvases plus menu overlays. */
+/* Skyline Courier — page chrome: full-screen canvases plus menu overlays.
+   The 3D view sits at z-index 0, the instrument canvas floats above it at 1,
+   and the menu/pause/game-over overlays at 2. */
 html, body {
   margin: 0; height: 100%; overflow: hidden; background: #0d1b2a;
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif; color: #eef4fa;

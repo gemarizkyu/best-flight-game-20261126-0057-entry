@@ -1,7 +1,8 @@
 // Skyline Courier — the hand-in program (Node 22, standard library only).
 // It copies this repository's game/ and screenshots/ into /output and writes
 // /output/dossier.json, the summary the judge reads, with the vendored make.fun
-// library. Outside the grader, MAKEFUN_OUTPUT_DIR stands in for /output:
+// library. The build is deterministic: two runs write byte-identical output.
+// Outside the grader, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';

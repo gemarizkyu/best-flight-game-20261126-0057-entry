@@ -14,6 +14,7 @@ export class Input {
     this.canvas = canvas;
 
     window.addEventListener('keydown', (e) => {
+      // Arrows and Space scroll the page by default; the game owns them.
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space'].includes(e.code)) {
         e.preventDefault();
       }

@@ -12,6 +12,8 @@ export function mulberry32(seed) {
 }
 
 // A stable 2D hash: the same (x, z, seed) always returns the same value in [0, 1).
+// The multiply-xor-shift avalanche spreads neighbouring lattice points apart,
+// so the terrain never shows a grid.
 export function hash2(x, z, seed) {
   let h = (x * 374761393 + z * 668265263 + seed * 974634211) | 0;
   h = Math.imul(h ^ (h >>> 13), 1274126177);

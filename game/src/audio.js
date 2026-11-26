@@ -69,6 +69,7 @@ export class SoundEngine {
   setFlight(throttle, speed, flying) {
     if (!this.ctx || this.muted) return;
     const t = this.ctx.currentTime;
+    // The prop note climbs with throttle and speed; the wind opens with speed.
     const rpm = 52 + throttle * 95 + speed * 0.35;
     this.engineOsc.frequency.setTargetAtTime(rpm, t, 0.1);
     this.engineOsc2.frequency.setTargetAtTime(rpm * 1.494, t, 0.1);

@@ -38,7 +38,7 @@ export const CONFIG = {
   },
   missions: {
     ring: {
-      id: 'ring', name: 'Ring Run', timeLimit: 240, rings: 8,
+      id: 'ring', name: 'Ring Run', timeLimit: 240, rings: 8, // 4 minutes on the clock
       brief: 'Thread all 8 golden rings before the clock runs out.',
       ringScore: 100, timeBonusPerSecond: 5,
     },

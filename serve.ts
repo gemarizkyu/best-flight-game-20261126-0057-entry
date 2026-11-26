@@ -28,6 +28,7 @@ const MIME = {
   '.wav': 'audio/wav',
   '.mp3': 'audio/mpeg',
   '.txt': 'text/plain; charset=utf-8',
+  '.wasm': 'application/wasm',
 };
 
 createServer((request, response) => {

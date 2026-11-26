@@ -54,6 +54,8 @@ export class CameraRig {
   }
 
   // Clouds drift, the windsock swings, the next ring breathes. Cheap life.
+  // Time here is the clock's elapsed seconds, so the motion is smooth at
+  // any frame rate and identical for the same seed.
   animateWorld(dt, world, mission, time) {
     for (const cloud of world.clouds) {
       cloud.position.x += cloud.userData.speed * dt;

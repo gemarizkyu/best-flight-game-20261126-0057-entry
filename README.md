@@ -14,6 +14,12 @@ node serve.ts
 
 Then open http://localhost:8080 and pick a mission.
 
+## Screenshots
+
+Four captures of the game itself, in `screenshots/` (the first is the cover):
+chase view threading the golden ring, the cockpit panel, short final over the
+runway, and the mission menu.
+
 ## Controls
 
 | Key | Does |
